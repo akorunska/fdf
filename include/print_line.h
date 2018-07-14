@@ -1,28 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fdf.h                                              :+:      :+:    :+:   */
+/*   print_line.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akorunsk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/07/14 15:31:04 by akorunsk          #+#    #+#             */
-/*   Updated: 2018/07/14 15:31:07 by akorunsk         ###   ########.fr       */
+/*   Created: 2018/07/14 18:43:47 by akorunsk          #+#    #+#             */
+/*   Updated: 2018/07/14 18:44:19 by akorunsk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FDF_H
-# define FDF_H
+#ifndef PRINT_LINE_H
+# define PRINT_LINE_H
 
-typedef struct	s_params
-{
-	void	*mlx;
-	void	*win;
-}				t_params;
-
-typedef struct	s_point
-{
-	int		x;
-	int		y;
-}				t_point;
+void print_line(t_params *p, t_point *p0, t_point *p1);
 
 #endif

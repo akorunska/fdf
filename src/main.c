@@ -13,6 +13,7 @@
 #include "libft.h"
 #include "fdf.h"
 #include "handlers.h"
+#include "print_line.h"
 #include "mlx.h"
 
 void	call_hooks(t_params *params)
@@ -21,16 +22,26 @@ void	call_hooks(t_params *params)
 	mlx_key_hook(params->win, handle_keys, (void*)params);
 }
 
+void	test_line(t_params *params)
+{
+	t_point p0 = {10, 100};
+	t_point p1 = {600, 400};
+	print_line(params, &p0, &p1);
+}
+
 int		main(int argc, char **argv)
 {
-	t_params params;
+	t_params params; 
 
 	if (argc == 2)
 	{
 		ft_printf("attempting to read map [%s]\n", argv[1]);
 		params.mlx = mlx_init();
-		params.win = mlx_new_window(params.mlx, 200, 200, "fdf");
+		params.win = mlx_new_window(params.mlx, 1200, 900, "fdf");
 		call_hooks(&params);
+
+		test_line(&params);
+
 		mlx_loop(params.mlx);
 	}
 	else
