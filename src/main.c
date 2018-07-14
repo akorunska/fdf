@@ -18,6 +18,7 @@
 void	call_hooks(t_params *params)
 {
 	mlx_hook(params->win, 17, 1L << 17, exit_x, (void*)params);
+	mlx_key_hook(params->win, handle_keys, (void*)params);
 }
 
 int		main(int argc, char **argv)

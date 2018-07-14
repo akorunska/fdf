@@ -13,6 +13,9 @@
 #ifndef HANDLERS_H
 # define HANDLERS_H
 
+int handle_keys(int key, void* params);
 int exit_x(void *params);
+
+void exit_esc(void *params);
 
 #endif
