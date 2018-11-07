@@ -1,1 +1,1 @@
-gcc src/*.c -o fdf -Werror -Wextra -Wall -lmlx -lXext -lX11 -L minilibx/ -I minilibx/ -I include/ -I libft/ libft/libft.a 
+gcc src/*.c -o fdf -Wextra -Wall -lmlx -lXext -lX11 -L minilibx/ -I minilibx/ -I include/ -I libft/ libft/libft.a 
