@@ -24,9 +24,9 @@ void	call_hooks(t_params *params)
 
 void	test_line(t_params *params)
 {
-	t_point p0 = {10, 100};
+	t_point p0 = {500, 100};
 	t_point p1 = {600, 400};
-	print_line(params, &p0, &p1);
+	print_line(params, &p1, &p0);
 }
 
 int		main(int argc, char **argv)

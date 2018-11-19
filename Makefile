@@ -24,7 +24,7 @@ FLAGS = -Wall -Wextra -Werror
 
 CFLAGS = -c $(FLAGS)
 
-MLX_FLAGS = -lmlx -framework AppKit -framework OpenGL
+MLX_FLAGS = -lm -lmlx -framework AppKit -framework OpenGL
 
 LIBNAME = libft/libft.a
 
