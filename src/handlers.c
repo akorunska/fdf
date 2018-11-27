@@ -13,10 +13,12 @@
 #include <stdlib.h>
 #include "libft.h"
 #include "handlers.h"
+#include "fdf.h"
 
 int exit_x(void *params)
 {
-	params = NULL;
+	if (((t_params*)params)->initial_map)
+		ft_memdel((void**)&(((t_params*)params)->initial_map));
 	exit(1);
 	return (0);
 }

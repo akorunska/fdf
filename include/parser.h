@@ -11,6 +11,8 @@
 /* ************************************************************************** */
 
 #ifndef PARSER_H
-# define PARSER_H
+# define PARSER_H	
+
+t_map *parse_map(char *file);
 
 #endif

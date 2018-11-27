@@ -74,19 +74,4 @@ void print_line(t_params *p, t_point *p0, t_point *p1)
 		swapped ? (cur.y += sig_y) : (cur.x += sig_x);
 		index++;
 	}
-	/*if (p0->x > p1->x)
-	{
-		swap(&(p0->x), &(p1->x));
-		swap(&(p0->y), &(p1->y));
-		swapped = 1;
-	}
-	if (absolute(dx) > absolute(dy))
-		print_line_dx(p, p0, p1);
-	else
-		print_line_dy(p, p0, p1);
-	if (swapped)
-	{
-		swap(&(p0->x), &(p1->x));
-		swap(&(p0->y), &(p1->y));
-	}*/
 }

@@ -11,9 +11,13 @@
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "fdf.h"
+#include "libft.h"
+
 
 void exit_esc(void *params)
 {
-	params = NULL;
+	if (((t_params*)params)->initial_map)
+		ft_memdel((void**)&(((t_params*)params)->initial_map));
 	exit(1);
 }
