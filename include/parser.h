@@ -13,6 +13,12 @@
 #ifndef PARSER_H
 # define PARSER_H	
 
+typedef struct	s_parse_error
+{
+	int		line;
+	char	error_type;
+}				t_parse_error;
+
 t_map *parse_map(char *file);
 
 #endif
