@@ -32,9 +32,11 @@ int is_valid_signed_decimal(char *coordinate)
 	return (1);
 }
 
-int	is_valic_hex(char *color)
+int	is_valid_hex(char *color)
 {
 	color = NULL;
+	if (!color)
+		return (1);
 	return (1);
 }
 
@@ -52,7 +54,7 @@ int validate_coordinate(char *coordinate)
 	if (!is_valid_signed_decimal(splitted[0]))
 		return (0);
 	if (i == 1)
-		if (!is_valic_hex(splitted[1]))
+		if (!is_valid_hex(splitted[1]))
 			return (0);
 	return (1);
 }
@@ -100,7 +102,6 @@ int fill_map_metrics(t_map *m, char *file)
 				ft_strdel(&row);
 				break;
 			}
-			// if current_w is always -1 parser wont get an error (try makefile)
 			current_w = count_digits_per_row(row);
 			ft_strdel(&row);
 			if (!(m->h))
@@ -110,7 +111,8 @@ int fill_map_metrics(t_map *m, char *file)
 			(m->h)++;
 		}
 		close(fd);
-		return (1);
+		if (m->w != -1)
+		    return (1);
 	}
 	return (0);
 }
